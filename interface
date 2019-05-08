@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<style>
+		.hanging {
+			width: 300px;
+			position: absolute;
+			top: 70px;
+			margin-left: -130px;
+			left: 50%;
+		}
+		a {
+			color: black;
+			text-decoration: underline;
+		}
+		span {
+			color: white;
+			text-decoration: none;
+		}
+		div {
+			width: 500px;
+			position: absolute;
+			top: 250px;
+			margin-left: -250px;
+			left: 50%;
+			text-align: center;
+		}
+	</style>
+	<head>
+		<meta charset="utf-8">
+		<title>Hangman Game</title>
+	</head>
+
+	<body>	
+		<h1 style="text-align:center">Hangman</h1>
+		<img id="hangedman" src="frame0.gif" alt="hangedman" class="hanging">
+		<div>
+			<p><form>Enter the [CAPITAL] letter you'd like to guess: 
+				<input type="text" id="guessed" name="guessed"></form>
+				<button onclick = "play()">Guess</button></p>
+			<p id="output">Take a guess--at the stickman's risk!</p>
+			<p><br>Mystery Word:<br>
+				<a><span id="T">T</span></a>
+				<a><span id="E">E</span></a>
+				<a><span id="A">A</span></a>
+				<a><span id="C">C</span></a>
+				<a><span id="U">U</span></a>
+				<a><span id="P">P</span></a></p>
+			<p id="attempted">Attempted Letters: </p>
+		</div>
+		<script>
+			var alphabet = {A: '', B: '', C: '', D: '', E: '', F: '', G: '', H: '', I: '', J: '', K: '', L: '', M: '', N: '', O: '', P: '', Q: '', R: '', S: '', T: '', U: '', V: '', W: '', X: '', Y: '', Z: ''};
+			var word = {T: '', E: '', A: '', C: '', U: '', P: ''};
+			var messages = {
+					defaultmsg: 'Trying again!? How brave...',
+					win:'YAY you win!',
+					lose: 'Oh no, you have lost :(',
+					repeat: 'You have already chosen that letter. Please enter a new one.',
+					error: 'Please enter a capital letter A-Z.'};
+			var oldLetters = {};
+			var attempts = document.getElementById("attempted");
+			var wrongLetters = 'Attempted Letters: ';
+			var correct = 0;
+			var tries = 1;
+			function play() {
+				userGuess = String(document.getElementById("guessed").value);
+				output = document.getElementById("output");
+				if (correct == 6 || tries == 7) {
+					correct = 0;
+					tries = 1;
+					oldLetters = {};
+					wrongLetters = 'Attempted Letters: '
+					document.getElementById('hangedman').src='frame0.gif';
+					output.innerHTML = messages.defaultmsg;
+					document.getElementById("T").style.color = '#FFFFFF';
+					document.getElementById("E").style.color = '#FFFFFF';
+					document.getElementById("A").style.color = '#FFFFFF';
+					document.getElementById("C").style.color = '#FFFFFF';
+					document.getElementById("U").style.color = '#FFFFFF';
+					document.getElementById("P").style.color = '#FFFFFF';
+				}
+				if (userGuess in alphabet) {
+					if (userGuess in oldLetters) {
+						output.innerHTML = messages.repeat;
+					}
+					else {
+						oldLetters[userGuess] = '';
+						if (userGuess in word) {
+							correct++;
+							switch (userGuess) {
+								case 'T':
+									document.getElementById("T").style.color = '#000000';
+									break;
+								case 'E':
+									document.getElementById("E").style.color = '#000000';
+									break;
+								case 'A':
+									document.getElementById("A").style.color = '#000000';
+									break;
+								case 'C':
+									document.getElementById("C").style.color = '#000000';
+									break;
+								case 'U':
+									document.getElementById("U").style.color = '#000000';
+									break;
+								case 'P':
+									document.getElementById("P").style.color = '#000000';
+								if (correct == 6) {
+									output.innerHTML = messages.win;
+								}
+							}
+						}
+						else {
+							tries++;
+							wrongLetters = wrongLetters.concat(userGuess + ' ');
+							attempts.innerHTML = wrongLetters;
+							switch (tries) {
+								case 2:
+									document.getElementById('hangedman').src='frame1.gif';
+									break;
+								case 3:
+									document.getElementById('hangedman').src='frame2.gif';
+									break;
+								case 4:
+									document.getElementById('hangedman').src='frame3.gif';
+									break;
+								case 5:
+									document.getElementById('hangedman').src='frame4.gif';
+									break;
+								case 6:
+									document.getElementById('hangedman').src='frame5.gif';
+									break;
+								case 7:
+									document.getElementById('hangedman').src='frame6.gif';
+									output.innerHTML = messages.lose;
+							}
+						}
+					}
+				}
+				else {
+					output.innerHTML = messages.error;
+				}
+			}
+		</script>
+	</body>
+</html>
