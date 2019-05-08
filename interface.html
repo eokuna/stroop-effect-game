@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<style>
-		.hanging {
-			width: 300px;
-			position: absolute;
-			top: 70px;
-			margin-left: -130px;
-			left: 50%;
+		body {
+			background-image: url("https://wallup.net/minimalism-grass-nature-sky-simple-background-mist/");
 		}
 		a {
 			color: black;
@@ -27,11 +23,11 @@
 	</style>
 	<head>
 		<meta charset="utf-8">
-		<title>Hangman Game</title>
+		<title>Stroop Effect Game</title>
 	</head>
 
 	<body>	
-		<h1 style="text-align:center">Hangman</h1>
+		<h1 style="text-align:center">Stroop Effect</h1>
 		<img id="hangedman" src="frame0.gif" alt="hangedman" class="hanging">
 		<div>
 			<p><form>Enter the [CAPITAL] letter you'd like to guess: 
@@ -70,6 +66,7 @@
 					oldLetters = {};
 					wrongLetters = 'Attempted Letters: '
 					document.getElementById('hangedman').src='frame0.gif';
+					document.body.style.backgroundImage = "url('img_tree.png')";
 					output.innerHTML = messages.defaultmsg;
 					document.getElementById("T").style.color = '#FFFFFF';
 					document.getElementById("E").style.color = '#FFFFFF';
