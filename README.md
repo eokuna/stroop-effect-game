@@ -1,7 +1,7 @@
 # stroop-effect-game
 CPE4750 project
 
-*========================================================================*
+*-----------------------------------------------------------------------*
 WHAT IT IS/HOW IT WORKS
 
 The Stroop Effect Game is an express node application game.
@@ -15,7 +15,7 @@ game introduction, play, and win or lose outcomes.
 *The HTTP POST is used to store player information (name, high score,
 and date played) to the game's database.
 
-*=======================================================================*
+*-----------------------------------------------------------------------*
 HOW TO PLAY
 
 The Stroop Effect game is a fun way to experience the phenomena in
