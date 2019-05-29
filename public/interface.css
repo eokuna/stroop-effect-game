@@ -1,0 +1,159 @@
+body, html {
+	height: 100%;
+	margin: 0;
+}
+@font-face { font-family: LCD_Solid; src: url(LCD_Solid.ttf); }
+h1 {
+	margin: 0;
+	padding: 30px;
+	text-align: center;
+	font-size: 60px;
+}
+button {
+	width: 75px;
+	height: 35px;
+	color: white;
+	font-family: "LCD_Solid";
+	background-color: black;
+	border: 3px solid #506382;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+button:hover {
+	background-color: #506382;
+}
+button:disabled {
+	opacity: 0.3;
+}
+.intro-bg {
+	background-image: url("https://media.giphy.com/media/14imT9w8OxSzCw/giphy.gif");
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	font-family: "LCD_Solid";
+	color: white;
+	margin: 0;
+}
+.intro-parent {
+	height: 250px;
+	width: 500px;
+	padding: 10px;
+	background-color: black;
+	margin: auto;
+	opacity: 0.7;
+	position: relative;
+}
+.intro-child {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+.tutorial-bg {
+	background-image: url("https://i.redd.it/hchp74msh6ly.gif");
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	font-family: "LCD_Solid";
+	color: white;
+	margin: 0;
+}
+.tutorial-parent {
+	height: 250px;
+	width: 700px;
+	padding: 10px;
+	background-color: black;
+	margin: auto;
+	opacity: 0.7;
+	position: relative;
+}
+.tutorial-child {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+.tutorial-child0 {
+	font-size: 40px;
+	color: pink;
+	position: absolute;
+	left: 50px;
+	bottom: 50px;
+}
+.tutorial-child1 {
+	position: absolute;
+	right: 225px;
+	bottom: 130px;
+}
+.tutorial-child2 {
+	position: absolute;
+	right: 310px;
+	bottom: 90px;
+}
+.tutorial-child3 {
+	position: absolute;
+	right: 140px;
+	bottom: 90px;
+}
+.tutorial-child4 {
+	position: absolute;
+	right: 275px;
+	bottom: 40px;
+}
+.tutorial-child5 {
+	position: absolute;
+	right: 175px;
+	bottom: 40px;
+}
+.tutorial-child6 {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+}
+.play-bg-over {
+	background-image: url("https://i.pinimg.com/originals/a1/af/5d/a1af5d23affea8fa99e6cdb7655fa0ee.gif");
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	font-family: "LCD_Solid";
+	color: white;
+	margin: 0;
+}
+.play-bg-under {
+	background-image: url("https://thumbs.gfycat.com/FewExaltedGoosefish-size_restricted.gif ");
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	opacity: 0.85;
+}
+.lose-bg {
+	background-image: url("https://media.giphy.com/media/AIlrItaxPyivS/giphy.gif");
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	font-family: "LCD_Solid";
+	color: white;
+	margin: 0;
+}
+.win-bg {
+	background-image: url("https://i.gifer.com/bAV.gif");
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	font-family: "LCD_Solid";
+	color: white;
+	margin: 0;
+	opacity: 0.85;
+}
+.progress-character {
+	background-image: url("https://media.giphy.com/media/8go5oBVjZcA2A/giphy.gif");
+	background-repeat: no-repeat;
+	height: 150px;
+	position: relative;
+	bottom: 20px;
+	left: 5px;
+}
