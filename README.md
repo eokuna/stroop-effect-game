@@ -1,5 +1,13 @@
 # Stroop Effect Game
-CPE4750 project
+CPE4750 Final Project
+
+Introduction
+------------
+The Stroop effect is a psychological phenomenon in which, given text that has mismatched color and spelling and tasked with identifying the color of the text despite what the text spells, test subjects erroneously read the text rather than correctly report the color. Named after John Ridley Stroop, who first published the effect in English in 1935, the Stroop effect challenges players in their endeavor to return home.
+
+Getting Started
+---------------
+- Install Node.js if you do not already have it at https://nodejs.org/en/download/
 
 WHAT IT IS/HOW IT WORKS *--------------------------------------------------------------------------------------------------------*
 The Stroop Effect Game is an express node application game.
@@ -32,10 +40,7 @@ This server will:
  - Send email notifications when a post has been starred.
  - Send weekly emails listing top post.
 
-Introduction
-------------
-
-- [Read more about Firebase Database](https://firebase.google.com/docs/database/)
+https://nodejs.org/en/download/
 
 Getting Started
 ---------------
