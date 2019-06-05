@@ -9,8 +9,10 @@ Getting Started
 ---------------
 - Install this repo
 - [Install Node.js](https://nodejs.org/en/download/)
-- [Install Express](https://expressjs.com/en/starter/installing.html) into the Stroop directory
-- Run `node server.js`
+- [Install Express](https://expressjs.com/en/starter/installing.html) into the stroop-effect-game directory
+  - (Run `npm install`)
+  - (Run `npm install express`)
+- Run `node server.js` in the directory
 - Go to http://localhost:3024 to play
 
 How to Play
