@@ -6,37 +6,24 @@
 		<title>Stroop Effect Game</title>
 	</head>
 	<body>
-		<div id="bg-over" class="play-bg-over">
-		<div id="bg-under" class="play-bg-under">
-			<h1>Your Score: <span id="score"></span></h1>
+		<div id="bg" class="tutorial-bg">
+			<h1>Choose Your Challenge</h1>
 			<div id="parent" class="tutorial-parent">
-				<p id="text">BEGIN!!!</p>
-				<div id="child" class="intro-child">
-					<form id="end-form" action="javascript:void(0);" method="get">
+				<p id="text">
+					Finite:<br>Recommended for Beginning Players.<br>Play to the end and reach your kingdom!<br><br>
+					Infinite:<br>Recommended for Advanced Players.<br>Play to set a new high score.
+				</p>
+				<div id="finite" class="finite">
+					<form id="intro-form" action="/play-finite" method="get">
+						<button id="finite-butt" type="submit" style="height:50px;width:100px">FINITE</button>
 					</form>
 				</div>
-				<div id="child0" class="tutorial-child0"><p id="word"><p></div>
-				<div id="child1" class="tutorial-child1">
-					<button id="butt1">PINK</button>
-				</div>
-				<div id="child2" class="tutorial-child2">
-					<button id="butt2">BLUE</button>
-				</div>
-				<div id="child3" class="tutorial-child3">
-					<button id="butt3">GREEN</button>
-				</div>
-				<div id="child4" class="tutorial-child4">
-					<button id="butt4">YELLOW </button>
-				</div>
-				<div id="child5" class="tutorial-child5">
-					<button id="butt5">ORANGE</button>
-				</div>
-				<div id="child6" class="tutorial-child6">
-					<p id="output">Time Remaining: <span id="time"></span><p>
+				<div id="infinite" class="infinite">
+					<form id="intro-form" action="/play-infinite" method="get">
+						<button id="infinite-butt" type="submit" style="height:50px;width:100px">INFINITE</button>
+					<form>
 				</div>
 			</div>
-			<div id="character" class="progress-character"></div>
-		</div>
 		</div>
 		<script type="text/javascript" src="interface.js"></script>
 		<script type="text/javascript" src="gameplay.js"></script>
