@@ -1,14 +1,21 @@
+/* Make content fill the screen */ 
 body, html {
 	height: 100%;
 	margin: 0;
 }
+
+/* Make LCD_Solid font usable in this app */ 
 @font-face { font-family: LCD_Solid; src: url(LCD_Solid.ttf); }
+
+/* Default first header settings */
 h1 {
 	margin: 0;
 	padding: 30px;
 	text-align: center;
 	font-size: 60px;
 }
+
+/* Default button styles */ 
 button {
 	width: 75px;
 	height: 35px;
@@ -25,6 +32,8 @@ button:hover {
 button:disabled {
 	opacity: 0.3;
 }
+
+/* Classes for introduction divs: background div, transparent floating div, button div */ 
 .intro-bg {
 	background-image: url("https://media.giphy.com/media/14imT9w8OxSzCw/giphy.gif");
 	height: 100%;
@@ -49,6 +58,8 @@ button:disabled {
 	bottom: 10px;
 	right: 10px;
 }
+
+/* Classes for tutorial divs: background div, transparent floating div, prompt text div, button divs, output div */
 .tutorial-bg {
 	background-image: url("https://i.redd.it/hchp74msh6ly.gif");
 	height: 100%;
@@ -68,11 +79,13 @@ button:disabled {
 	opacity: 0.7;
 	position: relative;
 }
+/* Right bottom button div */
 .tutorial-child {
 	position: absolute;
 	bottom: 10px;
 	right: 10px;
 }
+/* Prompt text div */
 .tutorial-child0 {
 	font-size: 40px;
 	color: pink;
@@ -80,36 +93,44 @@ button:disabled {
 	left: 50px;
 	bottom: 50px;
 }
+/* Button 1 div */
 .tutorial-child1 {
 	position: absolute;
 	right: 225px;
 	bottom: 130px;
 }
+/* Button 2 div */
 .tutorial-child2 {
 	position: absolute;
 	right: 310px;
 	bottom: 90px;
 }
+/* Button 3 div */
 .tutorial-child3 {
 	position: absolute;
 	right: 140px;
 	bottom: 90px;
 }
+/* Button 4 div */
 .tutorial-child4 {
 	position: absolute;
 	right: 275px;
 	bottom: 40px;
 }
+/* Button 5 div */
 .tutorial-child5 {
 	position: absolute;
 	right: 175px;
 	bottom: 40px;
 }
+/* Output text div */
 .tutorial-child6 {
 	position: absolute;
 	left: 10px;
 	bottom: 10px;
 }
+
+/* Restart button divs */
 .finite {
 	position: absolute;
 	left: 200px;
@@ -120,6 +141,8 @@ button:disabled {
 	right: 200px;
 	bottom: 40px;
 }
+
+/* Background classes for when the user plays, loses, and wins */
 .play-bg-over {
 	background-image: url("https://i.pinimg.com/originals/a1/af/5d/a1af5d23affea8fa99e6cdb7655fa0ee.gif");
 	height: 100%;
@@ -159,6 +182,8 @@ button:disabled {
 	margin: 0;
 	opacity: 0.85;
 }
+
+/* Div class for the moving character that shows "progress"/advancement of the game */
 .progress-character {
 	background-image: url("https://media.giphy.com/media/8go5oBVjZcA2A/giphy.gif");
 	background-repeat: no-repeat;
@@ -167,6 +192,9 @@ button:disabled {
 	bottom: 20px;
 	left: 5px;
 }
+
+/* Divs for html pages triggered when the player has lost */
+/* Larger div to hold high scores table */
 .lose-parent-infinite {
 	height: 400px;
 	width: 750px;
@@ -176,16 +204,18 @@ button:disabled {
 	opacity: 0.7;
 	position: relative;
 }
+/* Div to center Restart button in page */
 .lose-parent-finite {
-	height: 50px;
-	width: 100px;
-	padding: 10px;
+	height: 45px;
+	width: 85px;
 	background-color: black;
 	margin: auto;
 	opacity: 0.7;
 	position: relative;
 }
+/* Restart button div */
 .loser-butt {
 	position: absolute;
-	margin: auto;
+	left:5px;
+	top:5px;
 }
