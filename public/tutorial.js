@@ -1,6 +1,9 @@
+// change contents in the parent div on the introduction and tutorial pages
 function dialogue() {
+	// dialogue() triggers only on button click, so increment clickNum and change contents accordingly
 	clickNum++;
 	switch (clickNum) {
+		// just change the dialogue text ============================================================
 		case 1:
 			text.innerHTML = messages.betrayal;
 			break;
@@ -10,10 +13,13 @@ function dialogue() {
 		case 3:
 			text.innerHTML = messages.warning;
 			break;
+		// ========================================================================================
+		// change the dialogue and append a button to proceed to the tutorial
 		case 4:
 			text.innerHTML = messages.ready;
 			document.getElementById("myButt").innerHTML = "Let's Go!";
 			break;
+		// change the dialogue and setup the tutorial
 		case 5:
 			text.innerHTML = messages.begin;		
 			word.innerHTML = colors[5];
@@ -22,8 +28,9 @@ function dialogue() {
 			document.getElementById('bg').className = "tutorial-bg";
 			document.getElementById('parent').className = "tutorial-parent";
 			document.getElementById('child').className = "tutorial-child";
-			myButt.disabled = true;
-			for (var i = 1; i < 6; i++) { 
+			myButt.disabled = true;			// disable button until player completes tutorial
+			for (var i = 1; i < 6; i++) { 		// create the five tutorial buttons
+				// appends buttons to preset divs, inserts text, and sets onclick actions
 				switch (i) {
 					case 1:
 						butt1 = document.createElement("BUTTON");
@@ -62,16 +69,18 @@ function dialogue() {
 	}
 }
 
+// triggers when the correct (pink) button is clicked
 function tutcorrect() {
-	output.innerHTML = messages.tutright;
-	myButt.disabled = false;
-	butt1.disabled = true;
+	output.innerHTML = messages.tutright;		// output success message
+	myButt.disabled = false;			// enable button so player may progress
+	butt1.disabled = true;				// disable buttons to enforce continuing
 	butt2.disabled = true;
 	butt3.disabled = true;
 	butt4.disabled = true;
 	butt5.disabled = true;
 }
 
+// triggers when any other button is clicked
 function tutwrong() {
-	output.innerHTML = messages.tutwrong;
+	output.innerHTML = messages.tutwrong;		// output retry message
 }
