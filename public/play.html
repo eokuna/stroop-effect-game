@@ -2,30 +2,31 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<!-- Use interface.css to style this page -->
 		<link rel="stylesheet" type="text/css" href="interface.css">
 		<title>Stroop Effect Game</title>
 	</head>
 	<body>
-		<div id="bg" class="tutorial-bg">
+		<div id="bg" class="tutorial-bg">					<!-- set background -->
 			<h1>Choose Your Challenge</h1>
-			<div id="parent" class="tutorial-parent">
+			<div id="parent" class="tutorial-parent">			<!-- transparent box div -->
 				<p id="text">
 					Finite:<br>Recommended for Beginning Players.<br>Play to the end and reach your kingdom!<br><br>
 					Infinite:<br>Recommended for Advanced Players.<br>Play to set a new high score.
 				</p>
-				<div id="finite" class="finite">
+				<div id="finite" class="finite">			<!-- position Finite button in parent box -->
+					<!-- send play-finite GET to play finite version -->
 					<form id="intro-form" action="/play-finite" method="get">
 						<button id="finite-butt" type="submit" style="height:50px;width:100px">FINITE</button>
 					</form>
 				</div>
-				<div id="infinite" class="infinite">
+				<div id="infinite" class="infinite">			<!-- position Infinite button in parent box -->
+					<!-- send play-infinite GET to play infinite version -->
 					<form id="intro-form" action="/play-infinite" method="get">
 						<button id="infinite-butt" type="submit" style="height:50px;width:100px">INFINITE</button>
 					<form>
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="interface.js"></script>
-		<script type="text/javascript" src="gameplay.js"></script>
 	</body>
 </html>
