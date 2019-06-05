@@ -2,20 +2,25 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<!-- Use interface.css to style this page -->
 		<link rel="stylesheet" type="text/css" href="interface.css">
 		<title>Stroop Effect Game</title>
 	</head>
 	<body>
-		<div id="bg-over" class="play-bg-over">
-		<div id="bg-under" class="play-bg-under">
+		<div id="bg-over" class="play-bg-over">					<!-- set background layer 1/2 -->
+		<div id="bg-under" class="play-bg-under">				<!-- set background layer 2/2 -->
 			<h1>Your Score: <span id="score"></span></h1>
-			<div id="parent" class="tutorial-parent">
+			<div id="parent" class="tutorial-parent">			<!-- transparent box div -->
 				<p id="text">BEGIN!!!</p>
-				<div id="child" class="intro-child">
+				<div id="child" class="intro-child">			<!-- make button sit at bottom of the box -->
+					<!-- Allow dynamic form action, set in interface.js and tutorial.js files -->
+					<!-- Empty form to which Go On button will be appended -->
 					<form id="end-form" action="javascript:void(0);" method="get">
 					</form>
 				</div>
+				<!-- initialize div for text prompt -->
 				<div id="child0" class="tutorial-child0"><p id="word"><p></div>
+				<!-- divs for buttons -->
 				<div id="child1" class="tutorial-child1">
 					<button id="butt1">PINK</button>
 				</div>
@@ -31,13 +36,16 @@
 				<div id="child5" class="tutorial-child5">
 					<button id="butt5">ORANGE</button>
 				</div>
+				<!-- div for count down -->
 				<div id="child6" class="tutorial-child6">
 					<p id="output">Time Remaining: <span id="time"></span><p>
 				</div>
 			</div>
+			<!-- div for moving character -->
 			<div id="character" class="progress-character"></div>
 		</div>
 		</div>
+		<!-- Use interface.js and gameplay-infinite.js as backend code for this page -->
 		<script type="text/javascript" src="interface.js"></script>
 		<script type="text/javascript" src="gameplay-infinite.js"></script>
 	</body>
