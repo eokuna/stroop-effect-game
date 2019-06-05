@@ -32,4 +32,5 @@ var server = app.listen(3024,
 		var host = server.address().address
 		var port = server.address().port
 		console.log("Stroop app listening at http://" + host + ":" + port);
+		console.log(records[1].name);
 });
