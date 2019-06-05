@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="interface.css">
+		<script type="text/javascript" src="interface.js"></script>
+		<style>
+			table {
+				border-collapse: collapse;
+				width: 100%;
+			}
+
+			td, th {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+			}
+
+			tr:nth-child(even) {
+				background-color: #404040;
+			}
+		</style>
+		<title>Stroop Effect Game</title>
+	</head>
+	<body>	
+		<div id="bg" class="lose-bg">
+			<h1>You've lost &amp died :(</h1>
+			<div id="parent" class="lose-parent-infinite">
+				<h2>High Scores</h2>
+				<table id="highScores-table">
+					<tr>
+						<th>Name</th>
+						<th>Score</th>
+					</tr>
+				</table>
+				<div id="child6" class="tutorial-child">
+					<form id="intro-form" action="/play" method="get">
+						<button id="myButt" type="submit">Restart</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script>
+			var table = document.getElementById("highScores-table");
+			var array = [
+				{name:"Player 1", score:"32"},
+				{name:"Player 2", score:"31"},
+				{name:"Player 3", score:"30"},
+				{name:"Player 4", score:"29"},
+				{name:"Player 5", score:"28"}
+				]
+			array.push({name:"You", score:String(localStorage.getItem("playerScore"))});
+			array.sort(function (a, b) {
+				return b.score - a.score;
+			});
+			
+			for (var i = 0; i < 5; i++) {
+				var row = table.insertRow(table.length);
+				var cell1 = row.insertCell(0);
+				var cell2 = row.insertCell(1);
+				cell1.innerHTML = array[i].name;
+				cell2.innerHTML = array[i].score;
+			}
+		</script>
+	</body>
+</html>

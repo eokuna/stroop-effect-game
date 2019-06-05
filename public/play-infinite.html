@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="interface.css">
+		<title>Stroop Effect Game</title>
+	</head>
+	<body>
+		<div id="bg-over" class="play-bg-over">
+		<div id="bg-under" class="play-bg-under">
+			<h1>Your Score: <span id="score"></span></h1>
+			<div id="parent" class="tutorial-parent">
+				<p id="text">BEGIN!!!</p>
+				<div id="child" class="intro-child">
+					<form id="end-form" action="javascript:void(0);" method="get">
+					</form>
+				</div>
+				<div id="child0" class="tutorial-child0"><p id="word"><p></div>
+				<div id="child1" class="tutorial-child1">
+					<button id="butt1">PINK</button>
+				</div>
+				<div id="child2" class="tutorial-child2">
+					<button id="butt2">BLUE</button>
+				</div>
+				<div id="child3" class="tutorial-child3">
+					<button id="butt3">GREEN</button>
+				</div>
+				<div id="child4" class="tutorial-child4">
+					<button id="butt4">YELLOW </button>
+				</div>
+				<div id="child5" class="tutorial-child5">
+					<button id="butt5">ORANGE</button>
+				</div>
+				<div id="child6" class="tutorial-child6">
+					<p id="output">Time Remaining: <span id="time"></span><p>
+				</div>
+			</div>
+			<div id="character" class="progress-character"></div>
+		</div>
+		</div>
+		<script type="text/javascript" src="interface.js"></script>
+		<script type="text/javascript" src="gameplay-infinite.js"></script>
+	</body>
+</html>
