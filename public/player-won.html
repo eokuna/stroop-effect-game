@@ -2,17 +2,19 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<!-- Use interface.css to style this page -->
 		<link rel="stylesheet" type="text/css" href="interface.css">
-		<script type="text/javascript" src="interface.js"></script>
 		<title>Stroop Effect Game</title>
 	</head>
 	<body>	
-		<div id="bg" class="win-bg">
+		<div id="bg" class="win-bg">						<!-- set background -->
 			<h1>You've survived!!!</h1>
+			<!-- style header text color for better readability -->
 			<h1 style="color:rgba(46,49,49,0.75)">You've survived!!!</h1>
-			<div id="parent" class="intro-parent">
+			<div id="parent" class="intro-parent">				<!-- transparent box div to center button -->
 				<p>Well done &amp welcome back to your kingdom.<br>Now you can stop your brother!<br>Good Luck!!!</p>
-				<div id="child6" class="tutorial-child">
+				<div id="child6" class="tutorial-child">		<!-- position Restart button in parent box -->
+					<!-- send play GET again to return to choose version page -->
 					<form id="intro-form" action="/play" method="get">
 						<button id="myButt" type="submit">Restart</button>
 					</form>
