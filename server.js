@@ -12,13 +12,19 @@ app.get('/',
 app.get('/play',
 	function(req, res) {
 		res.sendFile(__dirname + '/public/play.html');
-		console.log("User playing now.");
+		console.log("User choosing challenge.");
 });
 
-app.get('/lose',
+app.get('/play-finite',
 	function(req, res) {
-		res.sendFile(__dirname + '/public/player-lost.html');
-		console.log("The player has lost.");
+		res.sendFile(__dirname + '/public/play-finite.html');
+		console.log("User playing finite now.");
+});
+
+app.get('/play-infinite',
+	function(req, res) {
+		res.sendFile(__dirname + '/public/play-infinite.html');
+		console.log("User playing infinite now.");
 });
 
 app.get('/win',
@@ -27,10 +33,21 @@ app.get('/win',
 		console.log("The player has won.");
 });
 
+app.get('/lose-finite',
+	function(req, res) {
+		res.sendFile(__dirname + '/public/player-lost-finite.html');
+		console.log("The player has lost.");
+});
+
+app.get('/lose-infinite',
+	function(req, res) {
+		res.sendFile(__dirname + '/public/player-lost-infinite.html');
+		console.log("The player has lost.");
+});
+
 var server = app.listen(3024,
 	function () {
 		var host = server.address().address
 		var port = server.address().port
 		console.log("Stroop app listening at http://" + host + ":" + port);
-		console.log(records[1].name);
 });
