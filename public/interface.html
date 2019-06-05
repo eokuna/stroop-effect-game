@@ -2,19 +2,22 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<!-- Use interface.css to style this page -->
 		<link rel="stylesheet" type="text/css" href="interface.css">
 		<title>Stroop Effect Game</title>
 	</head>
 	<body>	
-		<div id="bg" class="intro-bg">
+		<div id="bg" class="intro-bg">					<!-- set background -->
 			<h1>Stroop Effect</h1>
-			<div id="parent" class="intro-parent">
+			<div id="parent" class="intro-parent">			<!-- transparent box div -->
 				<p id="text">Your Highness, wake up!!!</p>
-				<div id="child" class="intro-child">
+				<div id="child" class="intro-child">		<!-- make button sit at bottom of the box -->
+					<!-- Allow dynamic form action, set in interface.js and tutorial.js files -->
 					<form id="intro-form" action="javascript:void(0);" method="get">
 						<button id="myButt" onclick="dialogue()">Next >></button>
 					</form>
 				</div>
+				<!-- initialize divs to which tutorial buttons, prompt, and output commentary will be appended -->
 				<div id="child0" class="tutorial-child0"><p id="word"><p></div>
 				<div id="child1" class="tutorial-child1"></div>
 				<div id="child2" class="tutorial-child2"></div>
@@ -24,6 +27,7 @@
 				<div id="child6" class="tutorial-child6"><p id="output"><p></div></div>
 			</div>
 		</div>
+		<!-- Use interface.js and tutorial.js as backend code for this page -->
 		<script type="text/javascript" src="interface.js"></script>
 		<script type="text/javascript" src="tutorial.js"></script>
 	</body>
