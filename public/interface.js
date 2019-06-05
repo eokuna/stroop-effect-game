@@ -15,7 +15,7 @@ var messages = {
 		wrong: 'Oh no Game Over!!!',
 		tutright: 'Correct!<br>Seems like you got it.',
 		right: 'This appears to be the correct path.<br>The journey continues...',
-		vitory: 'Well, this looks familiar...'};
+		victory: 'Well, this looks familiar...'};
 		
 var colors = ['BLACK', 'PINK', 'BLUE', 'GREEN', 'YELLOW', 'ORANGE']
 var textColors = ["#000000", "#ff99aa", "#0000e6", "#00cc00", "#ffff00", "#e69500"];
