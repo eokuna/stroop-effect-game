@@ -16,5 +16,3 @@ Getting Started
 How to Play
 -----------
 When the player first opens the app, a click-through introduction, elaborating the game's story plot, and tutorial will play. Afterwards, text on the left side of the screen will spell a color, which will not necessarily match the color of the text itself. The player must select the one of five total buttons presented on the right that spells the name of the color of the text. For example, the prompt text could spell "BLUE" in pink text, in which case the user would need to click the "PINK" button to continue playing.
-Infinite Mode ----------------------------
-Finitie Mode -------------------------------
